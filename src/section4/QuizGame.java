@@ -26,14 +26,26 @@ public class QuizGame {
 		// 5.  Create more questions by repeating steps 1, 2, and 3 below. 
 		if (answer.equals ("soap")) {
 			speak ("genius. I dont know what to say.");
-			speak (" You have a score of "+ score);
 			score = score + 1;
+			speak (" You have a score of "+ score);
+			
 		}
+		
 		else {
 		speak ("hhaaaa. why do people always say that");
 		speak ("your score is " + score);
-		score = score+1;
+		score = score+0;
 		}
+		
+		speak ("What is the best ANIME");
+		String anime = JOptionPane.showInputDialog("What is the best Anime");
+		if (anime.equals("Dragon Ball Z")) {
+		speak ("Correct Dragon ball Z is the best");
+		}
+		else {
+			speak ("You are not my friend anymore");
+		}
+		speak ("You have won a Hawaiian pizza, germ-x hand sanitizer and Pokemon");
 	}
 		// 6.  After all the questions have been asked, print the user's score 
 		static void speak(String words) {
